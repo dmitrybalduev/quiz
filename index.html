@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <title>Quiz</title>
+    </head>
+    <body>
+        <section class="min-vh-100 d-flex container justify-content-center ">
+            <div class="card flex-column my-5 w-50">
+            <div class="card-header d-inline-flex justify-content-between">
+                <p id="timer">Time: 120 seconds</p>
+                <p id="score"></p>
+            </div>
+            <div class="card-body" id="intro">
+              <h5 class="card-title">Coding Challenge Quiz</h5>
+              <p class="card-text">This is Quiz. Please choose one correct answer.(Please note if you choose wrong answer, time will decrease by 10 seconds)</p>
+              <button class="btn btn-primary" id="start">Start</button>
+            </div>
+            <div class="card-body">
+                <section id="quiz" style="display: none">
+                    <div id="question" class="card-title" ></div>
+                    <ol id="answers" class="list-group">
+                        <li class="btn btn-primary list-group-item-primary my-1" id="A" onclick="submitAnswer('A')"></li>
+                        <li class="btn btn-primary list-group-item-primary my-1" id="B" onclick="submitAnswer('B')"></li>
+                        <li class="btn btn-primary list-group-item-primary my-1" id="C" onclick="submitAnswer('C')"></li>
+                        <li class="btn btn-primary list-group-item-primary my-1" id="D" onclick="submitAnswer('D')"></li>
+                    </ol>
+                    <section id="is-correct"></section>
+                </section>
+                <form action="submit" id="form" style="display: none">
+                    <h2>ALL DONE!</h2>
+                    <label for="initials">Enter initials:</label>
+                    <input type="text" id="initials" >
+                    <input type="submit" id="submit">
+                </form>
+                <section id="list-w-buttons" style="display: none">
+                    <section id="score-list-section" >
+                        <h5>Scores</h5>
+                        <ol id="listScores" class="list-group"></ol>
+                    </section>
+                    <section id="finish-buttons" >
+                        <button class="m-2" id="go-back-button">Go back</button>
+                        <button class="m-2" id="clear-list-button">Clear score</button>
+                    </section>
+                </section>
+               
+            </div>
+
+            <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+            <script src="script.js"></script>
+          </div>
+        </section>
+        
+    </body>
+
+</html>
